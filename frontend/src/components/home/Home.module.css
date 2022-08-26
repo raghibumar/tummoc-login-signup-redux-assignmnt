@@ -1,9 +1,39 @@
+.container {
+  border: 1px solid transparent;
+  width: 76.5%;
+  margin: auto;
+  height: 600px;
+  background-color: rgb(190, 196, 193);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.homeDiv {
+  border: 1px solid transparent;
+  width: 500px;
+  margin: auto;
+  margin-top: 100px;
+}
+.homeDiv h1 {
+  text-align: center;
+}
 .maindiv {
   width: 600px;
   margin: auto;
+  border: 3px solid transparent;
 }
-.btnDiv{
-    margin: auto;
-    width: 60%;
-    margin-top: 20px;
+.btnDiv {
+  margin: auto;
+  width: 200px;
+  margin-top: 20px;
+  border: 1px solid transparent;
+}
+.btnDiv button {
+  padding: 10px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 25px;
+  background-color: rgb(54, 50, 50);
+  cursor: pointer;
+  border-radius: 5px;
 }

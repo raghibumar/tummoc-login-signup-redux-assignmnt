@@ -12,16 +12,20 @@ export const Home = () => {
   };
 
   const handleLogout = () => {
-    window.location.reload(false)
+    window.location.reload(false);
   };
 
   return (
     <>
       <Navbar type="HomePage" />
-      <div className={styles.maindiv}>
-        <h1>Hi welcome to homepage</h1>
-        <div className={styles.btnDiv}>
-          <button onClick={handleLogout}>Log Out</button>
+      <div className={styles.container}>
+        <div className={styles.maindiv}>
+          <div className={styles.homeDiv}>
+            <h1>Welcome to Homepage</h1>
+          </div>
+          <div className={styles.btnDiv}>
+            <button onClick={handleLogout}>Log Out</button>
+          </div>
         </div>
       </div>
     </>

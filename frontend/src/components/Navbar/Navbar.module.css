@@ -1,5 +1,5 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 .navbar {
   display: flex;
@@ -8,5 +8,11 @@
   padding: 0 10px 0 10px;
   height: 60px;
   align-items: center;
-  background-color: aqua;
+  background-color: rgb(16, 15, 22);
+  width: 75%;
+  margin: auto;
+  color: white;
+}
+.navbar > div {
+  margin: auto;
 }

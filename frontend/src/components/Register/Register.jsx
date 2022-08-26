@@ -11,7 +11,7 @@ const Register = () => {
     mob: "",
     password: "",
   });
-  console.log(data)
+  console.log(data);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -31,47 +31,53 @@ const Register = () => {
   };
   return (
     <>
-      <Navbar type="Register" />
-      <div className={styles.register}>
-        <div className={styles.upDiv}>
-          <h2>Register</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter name"
-            onChange={(e) => setData({ ...data, name: e.target.value })}
-          />
-          <br />
-          <br />
-          <input
-            type="email"
-            placeholder="enter email"
-            onChange={(e) => setData({ ...data, email: e.target.value })}
-          />
-          <br />
-          <br />
-          <input
-            type="number"
-            placeholder="Enter phone number"
-            onChange={(e) => setData({ ...data, mob: e.target.value })}
-          />
-          <br />
-          <br />
-          <input
-            type="password"
-            name=""
-            id=""
-            placeholder="Enter Password"
-            onChange={(e) => setData({ ...data, password: e.target.value })}
-          />
-          <br />
-          <br />
-
-          <div className={styles.butnDiv}>
-            <input type="submit" placeholder="Submit" className={styles.submit} />
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.register}>
+          <div className={styles.upDiv}>
+            <h1>Register</h1>
           </div>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Enter name"
+              onChange={(e) => setData({ ...data, name: e.target.value })}
+            />
+            <br />
+            <br />
+            <input
+              type="email"
+              placeholder="enter email"
+              onChange={(e) => setData({ ...data, email: e.target.value })}
+            />
+            <br />
+            <br />
+            <input
+              type="number"
+              placeholder="Enter phone number"
+              onChange={(e) => setData({ ...data, mob: e.target.value })}
+            />
+            <br />
+            <br />
+            <input
+              type="password"
+              name=""
+              id=""
+              placeholder="Enter Password"
+              onChange={(e) => setData({ ...data, password: e.target.value })}
+            />
+            <br />
+            <br />
+
+            <div className={styles.butnDiv}>
+              <input
+                type="submit"
+                placeholder="Submit"
+                className={styles.submit}
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );

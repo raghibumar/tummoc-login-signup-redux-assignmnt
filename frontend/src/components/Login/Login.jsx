@@ -14,56 +14,57 @@ const Login = () => {
     password: "",
   });
   // console.log(data)
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const token = useSelector((store) => store.token.token)
-  console.log(token)
+  const token = useSelector((store) => store.token.token);
+  console.log(token);
   useEffect(() => {
     if (token != null) {
-      navigate("/")
+      navigate("/");
     }
-  }, [token])
+  }, [token]);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(data)
-    dispatch(fetchToken(data))
+    e.preventDefault();
+    console.log(data);
+    dispatch(fetchToken(data));
   };
   return (
     <>
-      <Navbar type="login" />
-
-      <div className={styles.login}>
-        <div className={styles.upDiv}>
-          <h2>Login</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="enter email"
-            onChange={(e) => setData({ ...data, email: e.target.value })}
-          />
-          <br />
-          <br />
-
-          <input
-            type="password"
-            name=""
-            id=""
-            placeholder="Enter Password"
-            onChange={(e) => setData({ ...data, password: e.target.value })}
-          />
-
-          <br />
-          <br />
-          <div className={styles.butnDiv}>
-            <input
-              type="submit"
-              placeholder="Submit"
-              className={styles.submit}
-            />
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.login}>
+          <div className={styles.upDiv}>
+            <h1>Login</h1>
           </div>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="enter email"
+              onChange={(e) => setData({ ...data, email: e.target.value })}
+            />
+            <br />
+            <br />
+
+            <input
+              type="password"
+              name=""
+              id=""
+              placeholder="Enter Password"
+              onChange={(e) => setData({ ...data, password: e.target.value })}
+            />
+
+            <br />
+            <br />
+            <div className={styles.butnDiv}>
+              <input
+                type="submit"
+                placeholder="Submit"
+                className={styles.submit}
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );
