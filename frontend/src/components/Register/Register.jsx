@@ -11,7 +11,7 @@ const Register = () => {
     mob: "",
     password: "",
   });
-  console.log(data);
+  // console.log(data);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
