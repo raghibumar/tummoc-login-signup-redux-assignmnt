@@ -39,6 +39,7 @@ const Login = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <input
+              required
               type="email"
               placeholder="enter email"
               onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -47,6 +48,7 @@ const Login = () => {
             <br />
 
             <input
+              required
               type="password"
               name=""
               id=""

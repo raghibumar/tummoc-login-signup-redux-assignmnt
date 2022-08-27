@@ -14,6 +14,9 @@ const Register = () => {
   // console.log(data);
   const navigate = useNavigate();
 
+  // console.log(Object.keys(data))
+  // console.log(data.name.length)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const { name, email, mob, password, isAdmin } = data;
@@ -39,6 +42,7 @@ const Register = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <input
+              required
               type="text"
               placeholder="Enter name"
               onChange={(e) => setData({ ...data, name: e.target.value })}
@@ -46,6 +50,7 @@ const Register = () => {
             <br />
             <br />
             <input
+              required
               type="email"
               placeholder="enter email"
               onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -53,6 +58,7 @@ const Register = () => {
             <br />
             <br />
             <input
+              required
               type="number"
               placeholder="Enter phone number"
               onChange={(e) => setData({ ...data, mob: e.target.value })}
@@ -60,6 +66,7 @@ const Register = () => {
             <br />
             <br />
             <input
+              required
               type="password"
               name=""
               id=""

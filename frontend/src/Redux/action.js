@@ -7,7 +7,7 @@ const fetchAuthRequest = (payload) => {
   };
 };
 
-const fetchAuthSuccess = (payload) => {
+export const fetchAuthSuccess = (payload) => {
   return {
     type: types.FETCH_AUTH_SUCCESS,
     payload,
